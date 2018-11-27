@@ -1,13 +1,17 @@
 import React from 'react'
-import { StyleSheet, View } from 'react-native'
+import { StyleSheet, View, Text } from 'react-native'
 
-import ItemComponent from './components/ItemComponent'
+import StepComponent from './components/StepComponent'
+
+const data = require("./assets/story/story.json")
 
 export default class App extends React.Component {
   render () {
+    let firstStep = data.steps[0];
     return (
       <View style={styles.container}>
-        <ItemComponent name="coucou"></ItemComponent>
+        <Text>TEST</Text>
+        <StepComponent step={firstStep}></StepComponent>
       </View>
     )
   }
