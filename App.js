@@ -1,11 +1,13 @@
 import React from 'react'
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, View } from 'react-native'
+
+import ItemComponent from './components/ItemComponent'
 
 export default class App extends React.Component {
   render () {
     return (
       <View style={styles.container}>
-        <Text>Test 3 : open up App.js to start tester on your app!</Text>
+        <ItemComponent name="coucou"></ItemComponent>
       </View>
     )
   }
