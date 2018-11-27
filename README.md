@@ -3,5 +3,6 @@
 # Install 
 
 - `npm install`
-- `expo start`
+- `npm start`
 
+- Select tunnel connection to allow connection from external network
