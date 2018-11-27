@@ -3,7 +3,7 @@
         "id": 1,
         "content": "Tu ouvris les yeux, il faisait sombre. Allongé(e) sur un matelas, tu te redressas peu à peu.Assommé(e), tu te frottais le visage avec les mains. Lentement, la structure de la pièce qui t'entourait se dessinait autour de toi. Tu étais dans une cellule.",
         "answers": [
-            {"action":"Le suivre, et demander les modifications du visage", "next-step-id":2}
+            {"action":"Le suivre, et demander les modifications du visage", "next-step-id":2},
             {"action":"Le suivre, mais ne pas demander les modifications du visage","next-step-id":2}
         ]
     },
@@ -11,7 +11,7 @@
         "id": 2,
         "content": "Tu ouvris les yeux, il faisait sombre. Allongé(e) sur un matelas, tu te redressas peu à peu.Assommé(e), tu te frottais le visage avec les mains. Lentement, la structure de la pièce qui t'entourait se dessinait autour de toi. Tu étais dans une cellule.",
         "answers": [
-            {"action":"Le suivre, et demander les modifications du visage", "next-step-id":1}
+            {"action":"Le suivre, et demander les modifications du visage", "next-step-id":1},
             {"action":"Le suivre, mais ne pas demander les modifications du visage","next-step-id":1}
         ]
     }]
