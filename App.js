@@ -5,7 +5,7 @@ export default class App extends React.Component {
   render () {
     return (
       <View style={styles.container}>
-        <Text>Test : open up App.js to start tester on your app!</Text>
+        <Text>Test 3 : open up App.js to start tester on your app!</Text>
       </View>
     )
   }
