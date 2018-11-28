@@ -1,0 +1,27 @@
+import React from 'react'
+
+import { StyleSheet } from 'react-native'
+import { Button, View } from 'react-native'
+
+
+export default class ActionComponent extends React.Component {
+
+
+    render() {
+        console.log(this.props);
+        return <View style={{ margin: 20 }} ><Button
+            onPress={() => this.props.handler(this.props.step.next)}
+            title={`${this.props.index + 1} - ${this.props.step.action}`}
+            key={this.props.step.next}
+            color={'#1473e6'}
+            accessibilityLabel="Learn more about this purple button"
+        /></View>
+    }
+}
+
+const styles = StyleSheet.create({
+    text: {
+        color: '#fff',
+        margin: 20
+    }
+})
