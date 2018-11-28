@@ -10,7 +10,7 @@ export default class App extends React.Component {
     let firstStep = data.steps[0];
     return (
       <View style={styles.container}>
-        <Text>TEST</Text>
+        <Text style={styles.text}>TEST</Text>
         <StepComponent step={firstStep}></StepComponent>
       </View>
     )
@@ -20,8 +20,14 @@ export default class App extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#202020',
     alignItems: 'center',
-    justifyContent: 'center'
+    justifyContent: 'center',
+    color: '#fff'
+  },
+  text: {
+    color: '#fff',
+    fontWeight: 'bold',
+    fontSize: 30
   }
 })

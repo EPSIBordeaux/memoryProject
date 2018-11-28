@@ -1,25 +1,32 @@
 import React from 'react'
 
-import { Text } from 'react-native'
-import { Button } from 'react-native'
+import {StyleSheet, Text} from 'react-native'
+import { Button, View } from 'react-native'
 
 
 export default class StepComponent extends React.Component {
+
     render() {
         return [
-            <Text stepId={this.props.id}>{this.props.step.content}</Text>,
+            <Text style={styles.text} stepId={this.props.id}>{this.props.step.content}</Text>,
             this.props.step.answers.map(function (object, i) {
-                return <Button
+                return <View style={{margin:20}} ><Button
                     onPress={() => {
                         console.log(object.next)
                     }}
                     title={`${i + 1} - ${object.action}`}
-                    color="#841584"
                     stepId={object.next}
                     key={object.next}
                     accessibilityLabel="Learn more about this purple button"
-                />
+                /></View>
             })
         ]
     }
 }
+
+const styles = StyleSheet.create({
+    text: {
+        color: '#fff',
+        margin:20
+    }
+})
