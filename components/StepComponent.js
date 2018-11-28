@@ -17,6 +17,7 @@ export default class StepComponent extends React.Component {
                     title={`${i + 1} - ${object.action}`}
                     stepId={object.next}
                     key={object.next}
+                    color={'#1473e6'}
                     accessibilityLabel="Learn more about this purple button"
                 /></View>
             })
