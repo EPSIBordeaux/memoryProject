@@ -11,7 +11,8 @@
                     "action": "Etape 1 :Le suivre, mais ne pas demander les modifications du visage",
                     "next": 0
                 }
-            ]
+            ],
+            "image": "https://www.joomlaworks.net/images/demos/galleries/abstract/7.jpg"
         },
         {
             "content": "Etape 2 : Tu ouvris les yeux, il faisait sombre. Allongé(e) sur un matelas, tu te redressas peu à peu.Assommé(e), tu te frottais le visage avec les mains. Lentement, la structure de la pièce qui t'entourait se dessinait autour de toi. Tu étais dans une cellule.",
@@ -24,7 +25,8 @@
                     "action": "Etape 3: Le suivre, mais ne pas demander les modifications du visage",
                     "next": 2
                 }
-            ]
+            ],
+            "image": "https://www.planwallpaper.com/static/images/Nikon-D810-Image-Sample-6.jpg"
         },
         {
             "content": "Etape 3 :Tu ouvris les yeux, il faisait sombre. Allongé(e) sur un matelas, tu te redressas peu à peu.Assommé(e), tu te frottais le visage avec les mains. Lentement, la structure de la pièce qui t'entourait se dessinait autour de toi. Tu étais dans une cellule.",
@@ -37,7 +39,8 @@
                     "action": "Le suivre, mais ne pas demander les modifications du visage",
                     "next": 0
                 }
-            ]
-        },
+            ],
+            "image": "https://fr.cdn.v5.futura-sciences.com/buildsv6/images/wide1920/f/5/0/f50159600a_100519_plus-belle-image-science-2016.jpg"
+        }
     ]
 }
