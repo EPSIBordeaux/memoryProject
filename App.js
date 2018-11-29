@@ -6,31 +6,24 @@ import './Game.js'
 
 import {createAppContainer, createStackNavigator} from 'react-navigation';
 import Home from "./Home";
+
 import Game from "./Game";
 
-const AppNavigator = createStackNavigator({
-    Home: Home,
-    Game: Game,
-},
-    {
 
+const AppNavigator = createStackNavigator({
+        Home: Home,
+        Game: Game,
+    },
+    {
         headerMode: 'none',
-        titleMode: 'none',
-        navigationOptions: {
-            //header: null,
-            title: null,
-            titleVisible: false,
-            headerVisible: false,
-            header: {
-                visible: false,
-            }
-        }
     });
 const AppContainer = createAppContainer(AppNavigator);
 
 export default class App extends React.Component {
     render() {
-        return <AppContainer />;
+        return <AppContainer>
+            <ScrollView >
+            </ScrollView>
+        </AppContainer>;
     }
 }
-

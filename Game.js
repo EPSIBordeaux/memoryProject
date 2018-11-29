@@ -7,7 +7,7 @@ import ActionKeyboard from './components/ActionKeyboard'
 import { createStackNavigator, createAppContainer } from "react-navigation";
 const data = require("./assets/story/story.json")
 
-class Game extends React.Component {
+export default class Game extends React.Component {
 
   constructor(props) {
 
@@ -77,7 +77,7 @@ class Game extends React.Component {
     }
 
     return (
-      <ScrollView style={styles.scrollContainer}>
+   <View style={styles.scrollContainer}>
         <View style={styles.container}>
           <Text style={styles.text}>Jeu - Vous êtes le héro !</Text>
           <DisplayComponent step={currentAction} />
@@ -93,7 +93,7 @@ class Game extends React.Component {
                   color={'#9c000f'}
               />
           </View>
-      </ScrollView>
+      </View>
 
     )
   }
@@ -104,14 +104,15 @@ const AppNavigator = createStackNavigator({
     }
 });
 
-export default createAppContainer(AppNavigator);
 const styles = StyleSheet.create({
   scrollContainer: {
+
     flex: 1,
     backgroundColor: '#202020',
+
   },
   container: {
-    paddingVertical: 40,
+      top: 30,
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
@@ -123,10 +124,8 @@ const styles = StyleSheet.create({
     fontSize: 30
   },
   buttonReset: {
-      bottom: 0,
-      right: 0,
-      marginRight: 0,
-      marginLeft: 20,
+      bottom: 20,
+      left: 20,
       textAlign: 'right',
       width: 100
   }
