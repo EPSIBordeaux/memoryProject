@@ -15,9 +15,10 @@ export default class App extends React.Component {
         this.state = {
             currentId: 0,
             progressionStep: ''
-        }
+        };
 
-        this.handler = this.handler.bind(this)
+        this.handler = this.handler.bind(this);
+        this.setProgressionStep = this.setProgressionStep.bind(this)
     }
 
     handler(stepId) {
@@ -26,12 +27,17 @@ export default class App extends React.Component {
         })
     }
 
+    setProgressionStep(value) {
+        console.log("updated", value.toString())
+        AsyncStorage.setItem('progressionStep', value);
+        this.setState({progressionStep: value});
+    }
     getCurrentId() {
         return this.state.currentId;
     }
 
     findById(id) {
-           return data.steps[id];
+        return data.steps[id];
     }
 
 
@@ -41,18 +47,23 @@ export default class App extends React.Component {
             console.log(this.state.progressionStep)
         });
     }
-    setProgressionStep = (value) => {
-        AsyncStorage.setItem('progressionStep', value);
-        this.setState({'progressionStep': value});
-    }
     render() {
         return (
             <View style={styles.container}>
-                <Text style={styles.text}>{this.state.progressionStep}</Text>
-                <Text style={styles.text}>Jeu - Vous êtes le héro !</Text>
-                <DisplayComponent step={this.findById(this.getCurrentId())}></DisplayComponent>
+                <View style={{ margin: 20 }} >
+                    <Button
+                        onPress={() => {
+                            this.handler(0);
+                            this.setProgressionStep('0')
+                        }}
+                        title={'reset'}
+                        color={'#1473e6'}
+                    />
+                </View>
+                <Text style={styles.text}>Jeu - Vous êtes le héros !</Text>
+                <DisplayComponent step={this.findById(this.getCurrentId())}/>
                 {this.findById(this.getCurrentId()).answers.map((object, i) => {
-                    return <ActionComponent step={object} key={i} index={i} handler={this.handler} ></ActionComponent>
+                    return <ActionComponent step={object} key={i} index={i} handler={this.handler} setProgressionStep={this.setProgressionStep} />
                 })}
             </View>
         )
