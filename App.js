@@ -1,8 +1,9 @@
 import React from 'react'
-import { Button, StyleSheet, ScrollView, View, Text } from 'react-native'
+import { StyleSheet, ScrollView, View, Text } from 'react-native'
 
 import DisplayComponent from './components/DisplayComponent'
 import ActionComponent from './components/ActionComponent'
+import ActionKeyboard from './components/ActionKeyboard'
 
 const data = require("./assets/story/story.json")
 
@@ -17,12 +18,23 @@ export default class App extends React.Component {
     }
 
     this.handler = this.handler.bind(this)
+    this.keyBoardHandler = this.keyBoardHandler.bind(this)
   }
 
   handler(stepId) {
     this.setState({
       currentId: stepId
     })
+  }
+
+  keyBoardHandler(text, answers) {
+    answers.forEach(element => {
+      if (element.action == text) {
+        this.setState({
+          currentId: element.next
+        })
+      }
+    });
   }
 
   getCurrentId() {
@@ -35,14 +47,32 @@ export default class App extends React.Component {
 
   render() {
 
+    let action = undefined;
+
+    const currentAction = this.findById(this.getCurrentId());
+
+    switch (currentAction.type) {
+      case "button":
+        action = currentAction.answers.map((object, i) => {
+          return <ActionComponent step={object} key={i} index={i} handler={this.handler} ></ActionComponent>
+        });
+        break;
+      case "keyboard":
+        action = <ActionKeyboard step={currentAction} handler={this.keyBoardHandler}></ActionKeyboard>;
+        break;
+      default:
+        action = currentAction.answers.map((object, i) => {
+          return <ActionComponent step={object} key={i} index={i} handler={this.handler} ></ActionComponent>
+        });
+        break;
+    }
+
     return (
       <ScrollView style={styles.scrollContainer}>
         <View style={styles.container}>
           <Text style={styles.text}>Jeu - Vous êtes le héro !</Text>
-          <DisplayComponent step={this.findById(this.getCurrentId())}></DisplayComponent>
-          {this.findById(this.getCurrentId()).answers.map((object, i) => {
-            return <ActionComponent step={object} key={i} index={i} handler={this.handler} ></ActionComponent>
-          })}
+          <DisplayComponent step={currentAction}></DisplayComponent>
+          {action}
         </View>
       </ScrollView>
     )
