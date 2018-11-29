@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button, StyleSheet, View, Text } from 'react-native'
+import { Button, StyleSheet, ScrollView, View, Text } from 'react-native'
 
 import DisplayComponent from './components/DisplayComponent'
 import ActionComponent from './components/ActionComponent'
@@ -36,21 +36,27 @@ export default class App extends React.Component {
   render() {
 
     return (
-      <View style={styles.container}>
-        <Text style={styles.text}>Jeu - Vous êtes le héro !</Text>
-        <DisplayComponent step={this.findById(this.getCurrentId())}></DisplayComponent>
-        {this.findById(this.getCurrentId()).answers.map((object, i) => {
-          return <ActionComponent step={object} key={i} index={i} handler={this.handler} ></ActionComponent>
-        })}
-      </View>
+      <ScrollView style={styles.scrollContainer}>
+        <View style={styles.container}>
+          <Text style={styles.text}>Jeu - Vous êtes le héro !</Text>
+          <DisplayComponent step={this.findById(this.getCurrentId())}></DisplayComponent>
+          {this.findById(this.getCurrentId()).answers.map((object, i) => {
+            return <ActionComponent step={object} key={i} index={i} handler={this.handler} ></ActionComponent>
+          })}
+        </View>
+      </ScrollView>
     )
   }
 }
 
 const styles = StyleSheet.create({
-  container: {
+  scrollContainer: {
     flex: 1,
     backgroundColor: '#202020',
+  },
+  container: {
+    paddingVertical: 40,
+    flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
     color: '#fff'
