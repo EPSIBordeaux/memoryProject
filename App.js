@@ -13,27 +13,28 @@ export default class App extends React.Component {
 
     super(props);
 
-        this.state = {
-            currentId: 0,
-            progressionStep: ''
-        };
+    this.state = {
+      currentId: 0,
+      progressionStep: 0
+    };
 
-        this.handler = this.handler.bind(this);
-        this.keyBoardHandler = this.keyBoardHandler.bind(this);
-        this.setProgressionStep = this.setProgressionStep.bind(this)
-    }
+    this.handler = this.handler.bind(this);
+    this.keyBoardHandler = this.keyBoardHandler.bind(this);
+    this.setProgressionStep = this.setProgressionStep.bind(this)
+  }
 
-    handler(stepId) {
-        this.setState({
-            currentId: stepId
-        })
-    }
+  handler(stepId) {
+    this.setState({
+      currentId: stepId
+    })
+  }
 
-    setProgressionStep(value) {
-        AsyncStorage.setItem('progressionStep', value.toString());
-        this.setState({progressionStep: value});
-    }
-    keyBoardHandler(text, answers) {
+  setProgressionStep(value) {
+    AsyncStorage.setItem('progressionStep', value.toString());
+    this.setState({ progressionStep: value });
+  }
+
+  keyBoardHandler(text, answers) {
     answers.forEach(element => {
       if (element.action == text) {
         this.setState({
@@ -47,15 +48,18 @@ export default class App extends React.Component {
     return this.state.currentId;
   }
 
-    findById(id) {
-        return data.steps[id];
-    }
-    componentDidMount = () => {
-        AsyncStorage.getItem('progressionStep').then((value) => {
-            this.setState({'currentId': value,  'progressionStep': value});
-            console.log(this.state.progressionStep)
-        });
-    }
+  findById(id) {
+    return data.steps[id];
+  }
+
+  componentDidMount = () => {
+    AsyncStorage.getItem('progressionStep').then((value) => {
+      if (value != undefined) {
+        this.setState({ 'currentId': value, 'progressionStep': value });
+      }
+    });
+  }
+
   render() {
 
     let action = undefined;
@@ -69,7 +73,7 @@ export default class App extends React.Component {
         });
         break;
       case "keyboard":
-        action = <ActionKeyboard step={currentAction} handler={this.keyBoardHandler} setProgressionStep={this.setProgressionStep}/>;
+        action = <ActionKeyboard step={currentAction} handler={this.keyBoardHandler} setProgressionStep={this.setProgressionStep} />;
         break;
       default:
         action = currentAction.answers.map((object, i) => {
@@ -81,20 +85,20 @@ export default class App extends React.Component {
     return (
       <ScrollView style={styles.scrollContainer}>
         <View style={styles.container}>
-          <Text style={styles.text}>Jeu - Vous êtes le héro !</Text>
+          <Text style={styles.text}>Jeu - Vous êtes le héros !</Text>
           <DisplayComponent step={currentAction} />
           {action}
         </View>
-          <View style={styles.buttonReset} >
-              <Button
-                  onPress={() => {
-                      this.handler(0);
-                      this.setProgressionStep('0')
-                  }}
-                  title={'reset'}
-                  color={'#9c000f'}
-              />
-          </View>
+        <View style={styles.buttonReset} >
+          <Button
+            onPress={() => {
+              this.handler(0);
+              this.setProgressionStep('0')
+            }}
+            title={'reset'}
+            color={'#9c000f'}
+          />
+        </View>
       </ScrollView>
 
     )
@@ -119,11 +123,11 @@ const styles = StyleSheet.create({
     fontSize: 30
   },
   buttonReset: {
-      bottom: 0,
-      right: 0,
-      marginRight: 0,
-      marginLeft: 20,
-      textAlign: 'right',
-      width: 100
+    bottom: 0,
+    right: 0,
+    marginRight: 0,
+    marginLeft: 20,
+    textAlign: 'right',
+    width: 100
   }
 })
