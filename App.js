@@ -13,7 +13,8 @@ export default class App extends React.Component {
         super(props);
 
         this.state = {
-            currentId: 0
+            currentId: 0,
+            progressionStep: ''
         }
 
         this.handler = this.handler.bind(this)
@@ -30,23 +31,21 @@ export default class App extends React.Component {
     }
 
     findById(id) {
-        return data.steps[id];
+           return data.steps[id];
     }
 
-    state = {
-        'progressionStep': ''
-    }
 
     componentDidMount = () => {
-        AsyncStorage.setItem('progressionStep', 'oust');
-        AsyncStorage.getItem('progressionStep').then((value) => this.setState({ 'progressionStep': value }))
+        AsyncStorage.getItem('progressionStep').then((value) => {
+            this.setState({'currentId': value,  'progressionStep': value});
+            console.log(this.state.progressionStep)
+        });
     }
     setProgressionStep = (value) => {
         AsyncStorage.setItem('progressionStep', value);
-        this.setState({ 'progressionStep': value });
+        this.setState({'progressionStep': value});
     }
     render() {
-
         return (
             <View style={styles.container}>
                 <Text style={styles.text}>{this.state.progressionStep}</Text>
