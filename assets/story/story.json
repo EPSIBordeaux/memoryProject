@@ -15,7 +15,7 @@
             "content": "Etape 1 : Tu ouvris les yeux, il faisait sombre. Allongé(e) sur un matelas, tu te redressas peu à peu.Assommé(e), tu te frottais le visage avec les mains. ",
             "answers": [
                 {
-                    "action": "",
+                    "action": "Action 1",
                     "next": 2
                 },
                 {
