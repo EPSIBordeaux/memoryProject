@@ -1,15 +1,26 @@
 {
     "steps": [
         {
+            "content": "Bonjour et bienvenue sur le jeu dont vous êtes le héros !\nCe jeu est une adapation mobile du célèbre livre dont vous êtes le héros.\nLes règles sont simple : à chaque étape, des choix vous seront proposés. A vous de faire les bons choix !\nCliquez sur commencer pour démarrer la partie. Votre progression est automatiquement enregistrée et vous pouvez recommencer à tout moment en cliquant sur 'Reset'.",
+            "answers": [
+                {
+                    "action": "Commencer !",
+                    "next": 1
+                }
+            ],
+            "image": "https://www.usinenouvelle.com/mediatheque/8/8/9/000162988.jpg",
+            "type": "button"
+        },
+        {
             "content": "Etape 1 : Tu ouvris les yeux, il faisait sombre. Allongé(e) sur un matelas, tu te redressas peu à peu.Assommé(e), tu te frottais le visage avec les mains. ",
             "answers": [
                 {
-                    "action": "Action 1",
-                    "next": 1
+                    "action": "",
+                    "next": 2
                 },
                 {
                     "action": "Action 2",
-                    "next": 2
+                    "next": 3
                 }
             ],
             "image": "https://www.joomlaworks.net/images/demos/galleries/abstract/7.jpg",
@@ -20,26 +31,26 @@
             "answers": [
                 {
                     "action": "12",
-                    "next": 0
+                    "next": 1
                 },
                 {
                     "action": "13",
-                    "next": 2
+                    "next": 3
                 }
             ],
             "image": "https://www.planwallpaper.com/static/images/Nikon-D810-Image-Sample-6.jpg",
             "type": "keyboard"
         },
         {
-            "content": "Etape 3 :Tu ouvris les yeux, il faisait sombre. Allongé(e) sur un matelas, tu te redressas peu à peu.Assommé(e), tu te frottais le visage avec les mains. Lentement, la structure de la pièce qui t'entourait se dessinait autour de toi. Tu étais dans une cellule.",
+            "content": "Etape 3 : Bienvenue sur le très long texte de l'étape 3. Etape 3 : Bienvenue sur le très long texte de l'étape 3. Etape 3 : Bienvenue sur le très long texte de l'étape 3. Etape 3 : Bienvenue sur le très long texte de l'étape 3. Etape 3 : Bienvenue sur le très long texte de l'étape 3. Etape 3 : Bienvenue sur le très long texte de l'étape 3. Etape 3 : Bienvenue sur le très long texte de l'étape 3. Etape 3 : Bienvenue sur le très long texte de l'étape 3. Etape 3 : Bienvenue sur le très long texte de l'étape 3. Etape 3 : Bienvenue sur le très long texte de l'étape 3. Etape 3 : Bienvenue sur le très long texte de l'étape 3. Etape 3 : Bienvenue sur le très long texte de l'étape 3. Etape 3 : Bienvenue sur le très long texte de l'étape 3. Etape 3 : Bienvenue sur le très long texte de l'étape 3. Etape 3 : Bienvenue sur le très long texte de l'étape 3. Etape 3 : Bienvenue sur le très long texte de l'étape 3. Etape 3 : Bienvenue sur le très long texte de l'étape 3. Etape 3 : Bienvenue sur le très long texte de l'étape 3. Etape 3 : Bienvenue sur le très long texte de l'étape 3. Etape 3 : Bienvenue sur le très long texte de l'étape 3. Etape 3 : Bienvenue sur le très long texte de l'étape 3.",
             "answers": [
                 {
                     "action": "Etape 2 : Le suivre, et demander les modifications du visage",
-                    "next": 1
+                    "next": 2
                 },
                 {
                     "action": "Le suivre, mais ne pas demander les modifications du visage",
-                    "next": 0
+                    "next": 1
                 }
             ],
             "image": "https://fr.cdn.v5.futura-sciences.com/buildsv6/images/wide1920/f/5/0/f50159600a_100519_plus-belle-image-science-2016.jpg",
