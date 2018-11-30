@@ -1,26 +1,16 @@
 {
     "steps": [
-        {
-            "content": "Bonjour et bienvenue sur le jeu dont vous êtes le héros !\nCe jeu est une adapation mobile du célèbre livre dont vous êtes le héros.\nLes règles sont simple : à chaque étape, des choix vous seront proposés. A vous de faire les bons choix !\nCliquez sur commencer pour démarrer la partie. Votre progression est automatiquement enregistrée et vous pouvez recommencer à tout moment en cliquant sur 'Reset'.",
-            "answers": [
-                {
-                    "action": "Commencer !",
-                    "next": 1
-                }
-            ],
-            "image": "https://www.usinenouvelle.com/mediatheque/8/8/9/000162988.jpg",
-            "type": "button"
-        },
+
         {
             "content": "Etape 1 : Tu ouvris les yeux, il faisait sombre. Allongé(e) sur un matelas, tu te redressas peu à peu.Assommé(e), tu te frottais le visage avec les mains. ",
             "answers": [
                 {
                     "action": "Action 1",
-                    "next": 2
+                    "next": 1
                 },
                 {
                     "action": "Action 2",
-                    "next": 3
+                    "next": 2
                 }
             ],
             "image": "https://www.joomlaworks.net/images/demos/galleries/abstract/7.jpg",
@@ -31,26 +21,26 @@
             "answers": [
                 {
                     "action": "12",
-                    "next": 1
+                    "next": 0
                 },
                 {
                     "action": "13",
-                    "next": 3
+                    "next": 2
                 }
             ],
             "image": "https://www.planwallpaper.com/static/images/Nikon-D810-Image-Sample-6.jpg",
             "type": "keyboard"
         },
         {
-            "content": "Etape 3 : Bienvenue sur le très long texte de l'étape 3. Etape 3 : Bienvenue sur le très long texte de l'étape 3. Etape 3 : Bienvenue sur le très long texte de l'étape 3. Etape 3 : Bienvenue sur le très long texte de l'étape 3. Etape 3 : Bienvenue sur le très long texte de l'étape 3. Etape 3 : Bienvenue sur le très long texte de l'étape 3. Etape 3 : Bienvenue sur le très long texte de l'étape 3. Etape 3 : Bienvenue sur le très long texte de l'étape 3. Etape 3 : Bienvenue sur le très long texte de l'étape 3. Etape 3 : Bienvenue sur le très long texte de l'étape 3. Etape 3 : Bienvenue sur le très long texte de l'étape 3. Etape 3 : Bienvenue sur le très long texte de l'étape 3. Etape 3 : Bienvenue sur le très long texte de l'étape 3. Etape 3 : Bienvenue sur le très long texte de l'étape 3. Etape 3 : Bienvenue sur le très long texte de l'étape 3. Etape 3 : Bienvenue sur le très long texte de l'étape 3. Etape 3 : Bienvenue sur le très long texte de l'étape 3. Etape 3 : Bienvenue sur le très long texte de l'étape 3. Etape 3 : Bienvenue sur le très long texte de l'étape 3. Etape 3 : Bienvenue sur le très long texte de l'étape 3. Etape 3 : Bienvenue sur le très long texte de l'étape 3.",
+            "content": "Etape 3 : Bienvenue sur le très long texte de l'étape 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi a libero in odio rhoncus aliquam nec vel nunc. Donec at ligula vehicula, viverra tortor ut, hendrerit lorem. Mauris cursus ante id lorem venenatis, ac luctus lorem pretium. Ut non egestas orci, vel lacinia lorem. Sed placerat posuere volutpat. Suspendisse a feugiat erat, a facilisis nulla. Quisque sed convallis massa. Nullam vel luctus magna. Nam vehicula ornare luctus. Nam interdum commodo rutrum. Integer in molestie ligula, sed suscipit erat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Praesent placerat turpis non mollis dapibus. Cras euismod purus id libero eleifend rutrum. Sed tempus maximus suscipit. Morbi tincidunt lectus nec sapien congue, mollis fringilla eros molestie. Suspendisse potenti. Nunc ultrices volutpat erat id lobortis. Sed malesuada neque ante. Aliquam luctus dui sed commodo sodales. Morbi consectetur neque ut mauris hendrerit consectetur. Suspendisse aliquam mollis lacus, at blandit elit tincidunt eu. Maecenas aliquet massa sit amet nulla lobortis aliquet. Donec congue lacus leo, quis luctus felis congue non. Pellentesque cursus ligula et nunc posuere, id aliquet turpis lobortis. Duis sem lectus, euismod quis dolor sit amet, vulputate eleifend nisl. Nunc et dolor aliquam, consequat ligula vitae, tincidunt urna. Mauris hendrerit felis semper risus maximus, eu lacinia justo gravida. Nullam placerat egestas neque, quis luctus massa posuere eu. Integer vehicula massa vitae elit facilisis imperdiet. Donec faucibus, metus nec bibendum auctor, sapien neque euismod turpis, ac volutpat risus orci eu sapien. Mauris vel rutrum turpis, vitae imperdiet massa. Vestibulum non ipsum congue, commodo enim ut, condimentum tortor. Nulla ac lorem mi. Nulla tincidunt felis tempus neque fringilla, molestie suscipit justo pulvinar. Aliquam velit magna, vulputate sed diam vel, euismod vestibulum dolor. Vestibulum mauris nisl, iaculis fermentum efficitur quis, fermentum ut nulla. Etiam sed urna cursus, lobortis lectus ac, malesuada purus. Nulla porta orci id lobortis finibus. Donec mollis condimentum sem et dignissim. Aenean maximus rutrum rhoncus. Praesent eleifend odio at gravida aliquet.",
             "answers": [
                 {
                     "action": "Etape 2 : Le suivre, et demander les modifications du visage",
-                    "next": 2
+                    "next": 1
                 },
                 {
                     "action": "Le suivre, mais ne pas demander les modifications du visage",
-                    "next": 1
+                    "next": 0
                 }
             ],
             "image": "https://fr.cdn.v5.futura-sciences.com/buildsv6/images/wide1920/f/5/0/f50159600a_100519_plus-belle-image-science-2016.jpg",
