@@ -84,7 +84,7 @@ export default class Game extends React.Component {
     return (
       <ScrollView style={styles.scrollContainer}>
         <View style={styles.container}>
-          <Text style={styles.text}>Jeu - Vous êtes le héro !</Text>
+          <Text style={styles.text}>Jeu - Vous êtes le héros !</Text>
           <DisplayComponent step={currentAction} />
           {action}
         </View>

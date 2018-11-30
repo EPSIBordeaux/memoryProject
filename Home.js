@@ -13,7 +13,7 @@ export default class Home extends React.Component {
         return (
             <ScrollView style={styles.scrollContainer}>
                 <View style={styles.container}>
-                    <Text style={styles.titre}>Vous êtes le héro !</Text>
+                    <Text style={styles.titre}>Vous êtes le héros !</Text>
                     <Text style={styles.text}>Bienvenue !
 
                         Vous vous apprêtez à vivre une histoire palpitante dans la peau d’un ingénieur en neuroscience !
