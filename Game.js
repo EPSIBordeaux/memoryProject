@@ -77,7 +77,7 @@ export default class Game extends React.Component {
     }
 
     return (
-   <View style={styles.scrollContainer}>
+   <ScrollView style={styles.scrollContainer}>
         <View style={styles.container}>
           <Text style={styles.text}>Jeu - Vous êtes le héro !</Text>
           <DisplayComponent step={currentAction} />
@@ -93,7 +93,7 @@ export default class Game extends React.Component {
                   color={'#9c000f'}
               />
           </View>
-      </View>
+      </ScrollView>
 
     )
   }
@@ -112,7 +112,7 @@ const styles = StyleSheet.create({
 
   },
   container: {
-      top: 30,
+    paddingVertical: 50,
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
